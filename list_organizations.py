@@ -1,3 +1,4 @@
+import sys
 import asyncio
 import requests
 from bs4 import BeautifulSoup 
@@ -7,11 +8,7 @@ from aiohttp import ClientSession
 global c
 c=1
 
-val = input("Enter year (2016 - 2020):" )
-
-if (val>="2016" and val<="2020"):
-	url = 'https://summerofcode.withgoogle.com/archive/'+val+'/organizations/'
-
+url = 'https://summerofcode.withgoogle.com/archive/'+sys.argv[1]+'/organizations/'
 
 async def fetch_soup(link: str, session): 
 	org_page = await session.request(method="GET", url=link)
