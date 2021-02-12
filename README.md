@@ -7,3 +7,10 @@ asyncio <br>
 requests <br>
 BeautifulSoup <br>
 aiohttp <br>
+
+# Usage
+`pip install -r requirements.txt` <br>
+
+`python list_organizations.py 2020 | grep c++`      
+To list the organizations of year '2020' using technology 'c++' <br>
+
